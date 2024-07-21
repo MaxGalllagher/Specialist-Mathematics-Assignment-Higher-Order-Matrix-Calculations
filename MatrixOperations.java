@@ -1,7 +1,6 @@
 package SPECIALIST_ASSIGNMENT;
 
 public class MatrixOperations {
-
     public static void main(String[] args) {
         double[][] matrix = {
         {0, 0, 1.411111111, 1.05, 0.788888889, 0.788888889, 0.5, 0.948148148, 0.966666667, 0.5, 0.5, 1.259259259, 0.788888889, 0.788888889, 0, 0.788888889, 1.088888889, 0.5, 0, 0.788888889},
@@ -25,7 +24,15 @@ public class MatrixOperations {
         {1.211111111,	0,	0.5,	0,	1.358333333,	0.755555556,	0.474074074,	0.5,	0,	0,	0,	1.259259259,	0,	0.474074074,	0.5,	0.474074074,	0.474074074,	1,	0,	0.774074074},
         {0,	0.5,	0.937037037,	1.35,	0,	0.937037037,	0.937037037,	0,	0.966666667,	0,	0,	0.5,	0.937037037,	0,	0.5,	0.5,	0,	1,	0,	0}}
         ;
+        double scalar = 0.5;
+        double[][] scalarMatrix = new double [20][20];
 
+        for (int i=0; i < scalarMatrix.length; i++)
+            {
+            for (int j =0; j<scalarMatrix[i].length; j++)
+                scalarMatrix[i][j] = (int)(matrix[i][j]*scalar);   
+        }
+        
         double trace = calculateTrace(matrix);
         System.out.println("Trace of the matrix: " + trace);
 
